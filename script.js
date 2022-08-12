@@ -4,7 +4,6 @@ const pageViews = document.getElementById('pageviews-count')
 const switcher = document.getElementById('switcher');
 const month = document.getElementById('month');
 let clickButton = false;
-
 let rangeValue = 50 ;
 switcher.addEventListener('click',(event)=>{
     clickButton = !clickButton;
@@ -26,16 +25,16 @@ switcher.addEventListener('click',(event)=>{
             month.textContent ="/month";
         }
     }else{
-        if(event.target.value>=0&&event.target.value<25){
+        if(rangeValue>=0&&rangeValue<25){
             monthlyPrice.textContent = "$"+90;
             month.textContent ="/year";
-        }else if (event.target.value>=25&&event.target.value<50) {
+        }else if (rangeValue>=25&&rangeValue<50) {
             monthlyPrice.textContent = "$"+108;
             month.textContent ="/year";
-        } else if (event.target.value>=50&&event.target.value<=70){
+        } else if (rangeValue>=50&&rangeValue<=70){
             monthlyPrice.textContent = "$"+144;
             month.textContent ="/year";
-        }else if (event.target.value>70&&event.target.value<90){
+        }else if (rangeValue>70&&rangeValue<90){
             monthlyPrice.textContent = "$"+180;
             month.textContent ="/year";
         }else{
